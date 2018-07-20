@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -7,14 +8,14 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) {
-		String file = "/home/djamel/eclipse-workspace/Mapper/src/log",
+		String file = "./log.txt",
 				regex = "<ip> [<dtime>] \"GET HTTP/1.1 /<url>";
 		FileInputStream in = null;
 		FileOutputStream out = null;
 
 		try {
 			in = new FileInputStream(file);
-			out = new FileOutputStream("/home/djamel/eclipse-workspace/Mapper/src/output");
+			out = new FileOutputStream("./output.txt");
 
 			int c, i = 0;
 			c = in.read();
